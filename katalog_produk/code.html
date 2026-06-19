@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Katalog Produk - FinTrack Pro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#1d59c1",
+                        "surface-container": "#ededf6",
+                        "primary": "#003c90",
+                        "on-surface": "#191b22",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f3f3fc",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "secondary-fixed-dim": "#4edea3",
+                        "primary-fixed-dim": "#b0c6ff",
+                        "primary-container": "#0f52ba",
+                        "surface-bright": "#faf8ff",
+                        "on-background": "#191b22",
+                        "secondary-container": "#6cf8bb",
+                        "on-surface-variant": "#434653",
+                        "surface-container-lowest": "#ffffff",
+                        "border-light": "#E2E8F0",
+                        "outline-variant": "#c3c6d5",
+                        "surface-dim": "#d9d9e2",
+                        "surface": "#FFFFFF",
+                        "on-secondary-container": "#00714d",
+                        "on-primary-fixed": "#001945",
+                        "on-primary-container": "#bcceff",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#732900",
+                        "tertiary-fixed": "#ffdbcd",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#005236",
+                        "on-primary-fixed-variant": "#00419c",
+                        "background": "#faf8ff",
+                        "primary-fixed": "#d9e2ff",
+                        "on-error-container": "#93000a",
+                        "bg-subtle": "#F8FAFC",
+                        "surface-container-highest": "#e1e2eb",
+                        "on-secondary-fixed": "#002113",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "surface-variant": "#e1e2eb",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#993900",
+                        "secondary-fixed": "#6ffbbe",
+                        "danger": "#EF4444",
+                        "on-tertiary-fixed": "#360f00",
+                        "warning": "#F59E0B",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#b0c6ff",
+                        "secondary": "#006c49",
+                        "on-tertiary-container": "#ffc0a7",
+                        "inverse-surface": "#2e3037",
+                        "inverse-on-surface": "#f0f0f9",
+                        "surface-container-high": "#e7e7f1",
+                        "outline": "#737784"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "gutter": "24px",
+                        "base": "4px",
+                        "margin-desktop": "32px",
+                        "xl": "32px",
+                        "sm": "8px",
+                        "md": "16px",
+                        "margin-mobile": "16px",
+                        "lg": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-bg-subtle text-on-surface antialiased min-h-screen flex">
+<!-- SideNavBar -->
+<nav class="hidden md:flex flex-col p-lg gap-sm bg-surface fixed left-0 top-0 h-screen w-[260px] z-50 border-r border-outline-variant shadow-sm">
+<div class="mb-xl flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+<div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">FinTrack</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Enterprise Manager</p>
+</div>
+</div>
+<div class="flex-1 flex flex-col gap-sm">
+<a class="flex items-center gap-md px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm bg-primary-container text-on-primary-container rounded-lg font-bold scale-98 transition-transform shadow-sm" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-label-md text-label-md">Produk</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-label-md text-label-md">User</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#">
+<span class="material-symbols-outlined">help_center</span>
+<span class="font-label-md text-label-md">Tentang/FAQ</span>
+</a>
+</div>
+<button class="w-full bg-primary text-on-primary font-label-md text-label-md py-sm rounded-lg hover:bg-primary-container transition-colors mb-lg shadow-sm">
+            New Transaction
+        </button>
+<div class="flex flex-col gap-sm border-t border-outline-variant pt-lg">
+<a class="flex items-center gap-md px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-label-md text-label-md">Logout</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Wrapper -->
+<div class="flex-1 flex flex-col min-h-screen md:ml-[260px]">
+<!-- TopAppBar -->
+<header class="bg-surface shadow-sm docked full-width top-0 z-40 flex items-center justify-between px-margin-desktop h-16 w-full">
+<div class="flex items-center gap-md">
+<h2 class="font-headline-sm text-headline-sm font-bold text-primary">FinTrack Pro</h2>
+</div>
+<div class="flex items-center gap-md">
+<button class="p-sm text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-sm text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors flex items-center gap-sm">
+<img alt="Administrator profile photo" class="w-8 h-8 rounded-full" data-alt="A professional headshot of a business administrator. The man is wearing a crisp blue shirt, set against a clean, out-of-focus modern office background. The lighting is bright and even, conveying a sense of corporate trustworthiness and competence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDeEvbfna3q1KJdLVockcd6W1rM5j7AB2dzDB-E1dpuoCUQ_Ng5_Ds-7H1qGsHcRPx3dEwoWH4iPXfcbmODFxs_AYZhXCaMvD3G5Mnjt53tUsTxm7UUlnQqyDOaJstbNBrGJw2u5uC6VmKut3KhgEvRkRcIuxlSwkdRApZzAVs_RTPfHkWfwSQKD44ok0CD-IO77yr4KBLjrQDU0vJLYH70AX_EMIZ0wV9AF6qqRyA-Ee-PApbbx4BZ76BMs92TcF1syd757Ft3PQ"/>
+</button>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-1 p-margin-desktop overflow-y-auto">
+<div class="mb-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-md">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-xs">Katalog Produk</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Kelola dan pantau inventaris produk Anda.</p>
+</div>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-md py-sm rounded-lg hover:bg-primary-container transition-colors shadow-sm flex items-center gap-sm">
+<span class="material-symbols-outlined text-sm">add</span> Tambah Produk
+                </button>
+</div>
+<!-- Filters & Search Bar -->
+<div class="bg-surface p-md rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.04)] mb-gutter border border-border-light flex flex-col lg:flex-row gap-md items-end">
+<div class="w-full lg:w-1/3">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-xs">Cari Produk</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-xl pr-md py-sm bg-surface border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body-md text-body-md placeholder:text-outline text-on-surface" placeholder="Nama produk..." type="text"/>
+</div>
+</div>
+<div class="w-full lg:w-1/5">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-xs">Kategori</label>
+<select class="w-full px-md py-sm bg-surface border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body-md text-body-md text-on-surface appearance-none">
+<option>Semua Kategori</option>
+<option>Elektronik</option>
+<option>Aksesoris</option>
+<option>Komputer</option>
+</select>
+</div>
+<div class="w-full lg:w-1/5">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-xs">Stok</label>
+<select class="w-full px-md py-sm bg-surface border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body-md text-body-md text-on-surface appearance-none">
+<option>Semua Status</option>
+<option>Tersedia</option>
+<option>Menipis</option>
+<option>Habis</option>
+</select>
+</div>
+<div class="w-full lg:w-auto ml-auto">
+<button class="bg-surface-container-low text-primary font-label-md text-label-md px-md py-sm rounded-lg hover:bg-surface-container-high transition-colors border border-outline-variant flex items-center gap-sm h-[42px]">
+<span class="material-symbols-outlined">filter_list</span> Filter Lanjutan
+                    </button>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="bg-surface rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.04)] border border-border-light overflow-hidden hover:shadow-md transition-shadow group flex flex-col">
+<div class="aspect-square w-full bg-surface-container-lowest relative overflow-hidden border-b border-border-light">
+<img alt="Keyboard Mechanical" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A high-angle, well-lit studio shot of a modern mechanical keyboard with RGB backlighting turned off. The keyboard rests on a clean white surface, emphasizing its sleek, minimalist design. The lighting is soft and diffuse, highlighting the keycap textures and the premium build quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSZe8YsETh7elI1uLbMxoH7B6ACtZFfFbcBQ9YFAjHT_lrd6NvdlmTsnpzMx00KVk_eLtgceMlU4bPzb_TGavKR5o2qAgsj90CyEDed-A-RN4fxzte88Hd0m_jgyFJWYr1UbeXNTkiK29r9jlKCzLOR38A-H5vy0QmVteKvbsv4yCFUlfCNdH5ihxFhz9c5jLA2VmvWMDGFOovejS4G7vJ_nP6IdMfxO0DiVHqalsua0aN3hqK1gLNIYno4YuUBISorqDBj-YSE38"/>
+<div class="absolute top-sm right-sm bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-sm py-[2px] rounded-full">
+                            Stok: 24
+                        </div>
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-xs">Elektronik</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-sm line-clamp-1">Keyboard Mechanical</h3>
+<p class="font-headline-md text-headline-md text-primary mb-md mt-auto">Rp 350.000</p>
+<button class="w-full bg-surface-container-low text-primary font-label-md text-label-md py-sm rounded-lg hover:bg-surface-container-high transition-colors border border-outline-variant">
+                            Detail
+                        </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.04)] border border-border-light overflow-hidden hover:shadow-md transition-shadow group flex flex-col">
+<div class="aspect-square w-full bg-surface-container-lowest relative overflow-hidden border-b border-border-light">
+<img alt="Gaming Mouse" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A sleek, ergonomic black gaming mouse resting on a dark grey mousepad. The shot is captured from a slightly elevated angle with soft side lighting that accentuates its matte finish and curved design. The background is a clean, modern white workspace to maintain the corporate SaaS aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsvej49KyjLMSW5SlcvNPSpq_ovRc_aagoQJsWAvLz4awoBGuBv1nPNDmpFQdy3Ses0f46lWJ-wMzgQS1E3SziTkArnquB_bFAxBFjC1lFcMiMTbtdFFZ0W_OqnsjmqWEXodSPsIXJe4mJm6C9pldNdwqidrgmGd8pKpV1783gD9kshEtAQcHpNZbD__2PUm4sHNB8XAMJ83YiLQgxqDFTcK2r0VmstxF7tYN1uZCMjBv4SwM-4TpsX-NPbIBy_QcFuEAK2_VAFkk"/>
+<div class="absolute top-sm right-sm bg-warning/20 text-warning font-label-sm text-label-sm px-sm py-[2px] rounded-full">
+                            Stok: 5
+                        </div>
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-xs">Aksesoris</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-sm line-clamp-1">Pro Gaming Mouse</h3>
+<p class="font-headline-md text-headline-md text-primary mb-md mt-auto">Rp 250.000</p>
+<button class="w-full bg-surface-container-low text-primary font-label-md text-label-md py-sm rounded-lg hover:bg-surface-container-high transition-colors border border-outline-variant">
+                            Detail
+                        </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.04)] border border-border-light overflow-hidden hover:shadow-md transition-shadow group flex flex-col">
+<div class="aspect-square w-full bg-surface-container-lowest relative overflow-hidden border-b border-border-light">
+<img alt="UltraWide Monitor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A front-facing view of a large curved ultrawide computer monitor displaying an abstract blue desktop wallpaper. The monitor stands on a pristine white desk. The lighting is bright and corporate, highlighting the thin bezels and modern design of the display suitable for a high-end office setup." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP_cHJduHmUtsBoX9qnTkwxw9ldcTeHC4yYqMBxJAcv7VqUMrIYc2ojlZViMRVZJU_tDyK80CPzG0hejBCdkaqxfKPpisRrX9KTWszycT6ODj4ukOS3bdF2OZFxUVK2L0mJcDeuNmbuiLXrLrASzP50Yo6H-5lYXQt9lqkKZUz-XbJwVvBSp87E6v3RMYOztg0xmukkgKUd5BMSCJhja53TAIjyekWgQhf-o9Eqm-Ndmmj2ZjAdLjidM46b0zFGxn63QQ0KyhgjxI"/>
+<div class="absolute top-sm right-sm bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-sm py-[2px] rounded-full">
+                            Stok: 12
+                        </div>
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-xs">Komputer</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-sm line-clamp-1">UltraWide Monitor 34"</h3>
+<p class="font-headline-md text-headline-md text-primary mb-md mt-auto">Rp 4.500.000</p>
+<button class="w-full bg-surface-container-low text-primary font-label-md text-label-md py-sm rounded-lg hover:bg-surface-container-high transition-colors border border-outline-variant">
+                            Detail
+                        </button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.04)] border border-border-light overflow-hidden hover:shadow-md transition-shadow group flex flex-col">
+<div class="aspect-square w-full bg-surface-container-lowest relative overflow-hidden border-b border-border-light bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-outline text-display-lg" style="font-size: 64px;">image_not_supported</span>
+<div class="absolute top-sm right-sm bg-danger/10 text-danger font-label-sm text-label-sm px-sm py-[2px] rounded-full">
+                            Habis
+                        </div>
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-xs">Aksesoris</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-sm line-clamp-1">USB-C Hub Premium</h3>
+<p class="font-headline-md text-headline-md text-primary mb-md mt-auto">Rp 450.000</p>
+<button class="w-full bg-surface-container-low text-primary font-label-md text-label-md py-sm rounded-lg hover:bg-surface-container-high transition-colors border border-outline-variant opacity-50 cursor-not-allowed">
+                            Detail
+                        </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
