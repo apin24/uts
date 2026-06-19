@@ -1,0 +1,37 @@
+const express = require('express')
+const router = express.Router()
+const Product = require('../models/Product')
+
+// GET /api/products — ambil semua produk
+router.get('/', async (req, res) => {
+  try {
+    const products = await Product.find()
+    res.json(products)
+  } catch (error) {
+    res.status(500).json({ message: error.message })
+  }
+})
+
+// GET /api/products/:id — detail produk
+router.get('/:id', async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id)
+    if (!product) return res.status(404).json({ message: 'Produk tidak ditemukan' })
+    res.json(product)
+  } catch (error) {
+    res.status(500).json({ message: error.message })
+  }
+})
+
+// POST /api/products — tambah produk
+router.post('/', async (req, res) => {
+  try {
+    const product = new Product(req.body)
+    const saved = await product.save()
+    res.status(201).json(saved)
+  } catch (error) {
+    res.status(400).json({ message: error.message })
+  }
+})
+
+module.exports = router
