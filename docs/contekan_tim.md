@@ -138,3 +138,71 @@ Di Katalog Produk: **Tambah produk baru + upload gambar → Refresh (F5) → dat
 
 > [!TIP]
 > **Kata kunci sakti yang semua orang sebaiknya sebut minimal sekali:** React, Node.js, MongoDB, API, CRUD, real-time.
+
+---
+---
+
+## 💬 SESI TANYA-JAWAB: "Kamu Ngerjain Apa & Gimana Caranya?"
+
+> Simulasi dosen nanya tiap orang. Hafalin jawaban di bagianmu.
+
+### 🧑‍💻 ILHAM
+**T: Kamu ngerjain bagian apa?**
+> J: Saya menangani **Katalog Produk, Manajemen User, dan struktur Dashboard**.
+
+**T: Gimana cara kamu bikin fitur tambah produk?**
+> J: Saya bikin form input, lalu saat disimpan, datanya (termasuk gambar) dikirim ke backend Node.js lewat API, terus disimpan ke MongoDB. Setelah itu daftar produk otomatis di-refresh.
+
+**T: Gimana produk bisa diedit/dihapus?**
+> J: Setiap produk punya ID unik. Saat edit/hapus, saya kirim ID-nya ke backend, lalu backend cari data itu di database dan mengubah/menghapusnya.
+
+---
+
+### 🧑‍💻 ALFIN
+**T: Kamu ngerjain bagian apa?**
+> J: Saya bikin **ringkasan revenue & statistik**, **tampilan grid produk**, dan **daftar user**.
+
+**T: Gimana cara ngitung total revenue-nya?**
+> J: Saya ambil semua data transaksi dari database, lalu saya jumlahkan pakai fungsi `reduce` di JavaScript — dipisah antara pemasukan dan pengeluaran.
+
+**T: Kenapa produk ditampilkan grid?**
+> J: Biar rapi & responsif. Saya pakai layout grid CSS supaya kartu produk tersusun otomatis sesuai lebar layar.
+
+---
+
+### 🧑‍💻 ZAXLEE
+**T: Kamu ngerjain bagian apa?**
+> J: Saya bikin **grafik pengeluaran**, halaman **detail produk**, dan fitur **profil/edit user**.
+
+**T: Gimana cara bikin grafiknya?**
+> J: Saya ambil data pengeluaran dari database, lalu saya olah dan tampilkan dalam bentuk visual grafik biar mudah dianalisa.
+
+**T: Gimana halaman detail produk muncul?**
+> J: Saat produk diklik, saya ambil detail lengkapnya berdasarkan ID produk, lalu ditampilkan di halaman/popup detail.
+
+---
+
+### 🧑‍💻 KADEK
+**T: Kamu ngerjain bagian apa?**
+> J: Saya bikin fitur **pencarian dan filter** untuk produk, transaksi, dan user.
+
+**T: Gimana cara kerja fitur search-nya?**
+> J: Saya pakai fungsi `filter` di JavaScript. Setiap huruf yang diketik user langsung dicocokkan dengan data, jadi hasilnya tampil real-time tanpa reload.
+
+**T: Bedanya filter sama search?**
+> J: Search itu cari berdasarkan ketikan nama, kalau filter itu menyaring berdasarkan pilihan kategori atau tanggal.
+
+---
+
+### 🧑‍💻 NABIL
+**T: Kamu ngerjain bagian apa?**
+> J: Saya bikin **Landing Page/Home**, **kategori produk**, dan halaman **Tentang Kami/FAQ**.
+
+**T: Gimana cara bikin FAQ yang bisa buka-tutup?**
+> J: Saya pakai fitur *state* di React (accordion). Jadi saat pertanyaan diklik, jawabannya muncul, dan kalau diklik lagi jawabannya tersembunyi.
+
+**T: Fungsi landing page apa?**
+> J: Sebagai halaman perkenalan pertama biar pengunjung tertarik dan percaya sebelum lihat produk.
+
+> [!IMPORTANT]
+> Kalau ditanya sesuatu di luar bagianmu, jawab jujur: *"Itu bagian teman saya, [nama], biar dia yang jelaskan."* Ini normal dan nggak ngurangin nilai.
