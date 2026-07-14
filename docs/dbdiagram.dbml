@@ -1,0 +1,44 @@
+// Waveneap Management System - Database Schema
+// Copy-paste ke https://dbdiagram.io/d
+
+Table users {
+  _id ObjectId [pk, note: 'Primary key (auto-generated)']
+  name String [not null, note: 'Nama lengkap user']
+  username String [not null, note: 'Username untuk login']
+  email String [not null, note: 'Email user']
+  phone String [note: 'Nomor telepon']
+  role String [not null, note: 'enum: Admin, Kasir, Staff Packing']
+  password String [not null, note: 'Password di-hash bcrypt']
+  address_street String [note: 'Alamat jalan']
+  address_city String [note: 'Kota']
+  createdAt DateTime [default: `now()`, note: 'Waktu dibuat']
+  updatedAt DateTime [default: `now()`, note: 'Waktu diubah']
+}
+
+Table products {
+  _id ObjectId [pk, note: 'Primary key (auto-generated)']
+  title String [not null, note: 'Nama produk']
+  price Number [not null, note: 'Harga dalam Rupiah']
+  description String [note: 'Deskripsi produk']
+  category String [not null, note: 'Kategori: Pakaian, Hewan, dll']
+  image String [note: 'Path/URL file gambar']
+  variants JSON [note: 'Array of {size: String, stock: Number}']
+  createdAt DateTime [default: `now()`, note: 'Waktu dibuat']
+  updatedAt DateTime [default: `now()`, note: 'Waktu diubah']
+}
+
+Table transactions {
+  _id ObjectId [pk, note: 'Primary key (auto-generated)']
+  name String [not null, note: 'Nama/deskripsi transaksi']
+  category String [not null, note: 'Penjualan Produk, Jasa Iklan, Gaji, dll']
+  amount Number [not null, note: 'Nominal dalam Rupiah']
+  isIncome Boolean [not null, note: 'true=pemasukan, false=pengeluaran']
+  status String [not null, note: 'enum: Success, Pending, Failed']
+  date String [not null, note: 'Tanggal transaksi']
+  platform String [note: 'enum: Shopee, Tokopedia, Offline, Lainnya']
+  productId ObjectId [ref: > products._id, note: 'Referensi ke produk yang terjual']
+  variantSize String [note: 'Ukuran varian yang terjual']
+  notes String [note: 'Catatan tambahan']
+  createdAt DateTime [default: `now()`, note: 'Waktu dibuat']
+  updatedAt DateTime [default: `now()`, note: 'Waktu diubah']
+}
